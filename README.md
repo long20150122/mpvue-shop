@@ -1,4 +1,8 @@
-# mpvue 仿网易严选
+# mpvue开发流程
+index.html ==> main.js ==> App.vue
+
+《微信小程序mpvue+vant 没有找到可以构建的npm包》 https://blog.csdn.net/superKM/article/details/89520255
+《小程序开发之全局配置app.json》 https://blog.csdn.net/JackJia2015/article/details/85694388
 
 **2019年8月26日：**由于域名和证书到期了，以前下载项目的接口请求不到了，需要把请求的域名换成ip加端口
 ```javascript

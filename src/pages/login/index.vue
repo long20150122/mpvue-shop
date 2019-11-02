@@ -1,8 +1,6 @@
 <template>
   <div class="login">
-    <div class="logo">
-
-    </div>
+    <div class="logo"></div>
     <button class="login-btn" open-type="getUserInfo" lang="zh_CN" @getuserinfo="doLogin">微信登录</button>
   </div>
 </template>
@@ -25,6 +23,7 @@
     components: {},
     methods: {
       doLogin() {
+        console.log(1);
         wx.showLoading({
           title: "登录中...", //提示的内容,
           mask: true, //显示透明蒙层，防止触摸穿透,
@@ -57,9 +56,14 @@
               wx.navigateBack({});
             },
             fail: err => {
-              console.log(err);
+              console.log('==login==>',err);
               wx.hideLoading();
               wx.navigateBack({});
+
+              wx.navigateTo({
+                url: "/pages/innerLogin/main"
+              });
+              
             }
           });
         }

@@ -2,7 +2,7 @@
   "name": "mpvue",
   "version": "1.0.0",
   "description": "A Mpvue project",
-  "author": "heyushuo <1007561607@qq.com>",
+  "author": "FT <517864215@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "mpvue": "1.0.18",
     "mpvue-wxparse": "^0.6.4",
+    "vant-weapp": "^1.0.0-beta.0",
     "vuex": "^3.0.1",
     "wafer2-client-sdk": "^2.1.0"
   },

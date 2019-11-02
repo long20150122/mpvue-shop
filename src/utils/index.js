@@ -20,7 +20,8 @@ export function formatTime(date) {
 
 //-------------------------------------------------------------------------请求的封装
 
-const host = "http://118.25.222.68:5757/heyushuo";
+// const host = "http://118.25.222.68:5757/heyushuo";
+const host = "http://h2f5510320.zicp.vip:42816";
 export { host };
 //请求封装
 function request(url, method, data, header = {}) {
@@ -90,28 +91,30 @@ export function getStorageOpenid() {
 }
 
 export function getOpenid() {
-  // wx.login({
-  //   success: res => {
-  //     if (res.code) {
-  //       //发起网络请求
-  //       wx.request({
-  //         url: 'https://api.weixin.qq.com/sns/jscode2session',
-  //         data: {
-  //           "appid": "wx601ce71bde7b9add",
-  //           "secret": "abed5421d88eb8236e933c6e42d5c14e",
-  //           "js_code": res.code,
-  //           "grant_type": "authorization_code"
-  //         },
-  //         success: function (data) {
-  //           var openid = data.data.openid;
-  //           wx.setStorageSync("openid", openid);
-  //         }
-  //       })
-  //     } else {
-  //       console.log('登录失败！' + res.errMsg)
-  //     }
-  //   },
-  //   fail: () => {},
-  //   complete: () => {}
-  // });
+  wx.login({
+    success: res => {
+      if (res.code) {
+        //发起网络请求
+        wx.request({
+          url: 'https://api.weixin.qq.com/sns/jscode2session',
+          data: {
+            // "appid": "wx601ce71bde7b9add",
+            // "secret": "abed5421d88eb8236e933c6e42d5c14e",
+            "appid": "wx00e6ea3219e42a62",
+            "secret": "8e625acd903b51b5706112bc92626b29",
+            "js_code": res.code,
+            "grant_type": "authorization_code"
+          },
+          success: function (data) {
+            var openid = data.data.openid;
+            wx.setStorageSync("openid", openid);
+          }
+        })
+      } else {
+        console.log('登录失败！' + res.errMsg)
+      }
+    },
+    fail: () => {},
+    complete: () => {}
+  });
 }

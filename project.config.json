@@ -2,17 +2,31 @@
 	"description": "项目配置文件。",
 	"setting": {
 		"urlCheck": false,
-		"es6": false,
+		"es6": true,
+		"enhance": false,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"miniprogramRoot": "dist/",
 	"qcloudRoot": "server/",
 	"compileType": "miniprogram",
-	"appid": "wx601ce71bde7b9add",
-	"projectname": "mpvue-shop-ceshibanben",
+	"appid": "wx00e6ea3219e42a62",
+	"projectname": "mpvue-gylt",
 	"libVersion": "2.2.4",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

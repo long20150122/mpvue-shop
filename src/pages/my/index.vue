@@ -30,7 +30,22 @@
         this.userInfo = login();
         console.log(this.userInfo);
         this.avator = this.userInfo.avatarUrl;
+        this.avator = '';
       }
+
+      // FT
+      // wx.login({
+      //   success: () => {
+      //     wx.getUserInfo({
+      //       success: (res) => {
+      //         // userInfo = res.userInfo
+      //         this.userInfo = JSON.parse(res.rawData);
+      //         this.avator = this.userInfo.avatarUrl;
+      //       }
+      //     })
+      //   }
+      // })
+
     },
     created() {},
     mounted() {},
@@ -94,6 +109,10 @@
         }
       },
       toLogin() {
+        console.log('!this.userInfo.avatarUrl==>', !this.userInfo.avatarUrl);
+        wx.navigateTo({
+          url: "/pages/login/main"
+        });
         if (!this.userInfo.avatarUrl) {
           wx.navigateTo({
             url: "/pages/login/main"
